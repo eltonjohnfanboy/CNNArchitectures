@@ -33,7 +33,3 @@ def test(model, device, test_loader, criterion):
         accur = 100 * correct / total
             
         return loss_test/batch_idx, accur
-
-
-
-
