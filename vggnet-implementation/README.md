@@ -19,3 +19,19 @@ Weight initialization strategies are configuration-dependent. Random initializat
 The testing phase involves evaluating the trained VggNet16 model on the CIFAR-10 dataset. The results demonstrate the effectiveness of the implemented architecture in achieving classification accuracy. The experiments from the original Vgg paper emphasize the importance of increased network depth, the choice of convolutional filter sizes, and the benefits of ensemble learning for further reducing the error rate.
 
 Feel free to explore the provided code and the accompanying explanation to gain insights into the VggNet architecture and its implications for image classification tasks on the CIFAR-10 dataset.
+
+# Customizing and Training VggNet on Your Data
+
+## Training VggNet with Custom Data
+
+#### Configure Hyperparameters
+
+For the training of VggNet on your own dataset, you can customize the training process by modifying the `main.py` file. This file contains the main code for dataset loading, model initialization, training, and testing loops.
+
+(Optional) You can configure hyperparameters within the `main.py` file. Adjust parameters such as learning rate, batch size, and training epochs to suit your specific requirements.
+
+#### Modify Dataset Handling
+
+To experiment with different datasets or apply varied data augmentation techniques, you can make changes in the `dataset.py` file. This file handles the loading and preprocessing of the CIFAR-10 dataset by default.
+
+### After making changes, run the main.py script
