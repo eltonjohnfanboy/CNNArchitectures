@@ -2,8 +2,7 @@
 
 This repository contains a PyTorch implementation of the VggNet16 architecture adapted for image classification on the CIFAR-10 dataset. The VggNet, originally proposed for ImageNet, explores the depth aspect of CNN architecture using small 3x3 convolutional filters. The goal is to provide a clear codebase along with an explanation of key concepts from the Vgg paper.
 
-![VGG16 architecture](https://www.researchgate.net/publication/333242381/figure/fig2/AS:760979981860866@1558443174380/VGGNet-architecture-19.ppm)
-
+![VGG16 architecture](https://miro.medium.com/v2/resize:fit:850/1*B_ZaaaBg2njhp8SThjCufA.png)
 
 ## Overview
 
