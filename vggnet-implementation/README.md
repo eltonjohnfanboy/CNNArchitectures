@@ -2,6 +2,8 @@
 
 This repository contains a PyTorch implementation of the VggNet16 architecture adapted for image classification on the CIFAR-10 dataset. The VggNet, originally proposed for ImageNet, explores the depth aspect of CNN architecture using small 3x3 convolutional filters. The goal is to provide a clear codebase along with an explanation of key concepts from the Vgg paper.
 
+<img src="[https://deeplearning.vn/post/alexnet/images/relu.png](https://www.researchgate.net/publication/333242381/figure/fig2/AS:760979981860866@1558443174380/VGGNet-architecture-19.ppm)">
+
 ## Overview
 
 The VggNet architecture is designed to delve into the depth of Convolutional Neural Networks (CNNs) by utilizing small 3x3 convolutional filters. Unlike some previous architectures, VggNet focuses on stacking these small filters, resulting in a more expressive and discriminative decision function. The input to the network is a 224x224 RGB image, and during preprocessing, the mean RGB value is subtracted from each pixel.
@@ -34,4 +36,11 @@ For the training of VggNet on your own dataset, you can customize the training p
 
 To experiment with different datasets or apply varied data augmentation techniques, you can make changes in the `dataset.py` file. This file handles the loading and preprocessing of the CIFAR-10 dataset by default.
 
-### After making changes, run the main.py script
+#### After making changes, run the main.py script
+
+# Additional Resources
+
+For a deeper understanding of VggNet and its architectural choices, refer to the original paper:
+
+- "Very Deep Convolutional Networks for Large-Scale Image Recognition"
+  [Karen Simonyan, Andrew Zisserman](https://arxiv.org/abs/1409.1556)
