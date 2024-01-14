@@ -7,6 +7,9 @@ This repository contains an implementation of GoogLeNet, a deep neural network a
 GoogLeNet addresses the challenges of improving deep neural network (NN) performance by increasing both depth and width. However, this approach introduces issues such as overfitting and increased computational resource requirements. To tackle these challenges, the authors propose sparsely connected architectures, leading to the development of the Inception module. This architecture is particularly beneficial for localization and object detection tasks.
 
 ## Architecture
+
+![GoogLeNet architecture](https://miro.medium.com/v2/resize:fit:1400/0*G47uhQi2slwZI9-o.png)
+
 ### Inception Module
 The Inception module aims to approximate optimal local sparse structures in CNNs using readily available dense components. It consists of parallel convolutions with different filter sizes, but to manage computational costs, 1x1 convolutional layers are added before larger filters. These 1x1 layers reduce the number of channels and introduce non-linearity through ReLU activation functions. Inception modules are strategically placed in the network, with the option to use them primarily in higher layers for efficiency.
 
