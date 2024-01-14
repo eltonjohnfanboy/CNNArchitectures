@@ -2,6 +2,8 @@
 
 This repository contains the code for implementing ResNet in PyTorch, applied to the CIFAR-10 dataset. The implementation follows the concepts presented in the ResNet paper titled "Deep Residual Learning for Image Recognition" by Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
 
+![ResNet architecture]([https://miro.medium.com/v2/resize:fit:1400/0*G47uhQi2slwZI9-o.png](https://miro.medium.com/v2/resize:fit:1024/1*BnoNVpj7uCNMOFOj1DQBQA.png))
+
 ## Introduction
 
 The authors emphasize the importance of depth in neural networks for achieving state-of-the-art results in various tasks. While issues like vanishing/exploding gradients have been mitigated with regularization techniques, a new problem arises: as network depth increases, accuracy saturates and then degrades. This degradation is not due to overfitting, and adding more layers only exacerbates the issue.
