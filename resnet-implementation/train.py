@@ -1,6 +1,5 @@
 # Import the libraries
 import numpy as np
-import torch
 import torch.nn as nn
 from tqdm import tqdm
 
@@ -15,9 +14,9 @@ def train(model, device, train_loader, optimizer, epoch, criterion):
         data = data.to(device)
         target = target.to(device)
         
-        out_clf1, out_clf2, out = model(data)
+        out = model(data)
         
-        loss = criterion(out, target) + 0.3 * criterion(out_clf1, target) + 0.3 * criterion(out_clf2, target)
+        loss = criterion(out, target)
         
         optimizer.zero_grad()
         loss.backward()

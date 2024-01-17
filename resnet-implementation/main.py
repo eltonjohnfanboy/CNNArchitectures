@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import dataset as ds
 from train import train
 from test import test
-from model import GoogLeNet
+from model import ResBlock, ResNet
 
 # Device configuration
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -17,8 +17,8 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 train_ds = ds.train_dataset
 test_ds = ds.test_dataset
 
-train_loader = torch.utils.data.DataLoader(train_ds, batch_size = 256, shuffle = True)
-test_loader = torch.utils.data.DataLoader(test_ds, batch_size = 256, shuffle = False)
+train_loader = torch.utils.data.DataLoader(train_ds, batch_size = 64, shuffle = True)
+test_loader = torch.utils.data.DataLoader(test_ds, batch_size = 64, shuffle = False)
 
 # Define the model + weight initialitzation 
 # (used Xavier uniform, even though in the paper they use random initialization or weights of previously trained shallow networks)
@@ -30,7 +30,7 @@ def initialize_weights(m):
 
 input_dim = 3
 num_classes = 10
-model = GoogLeNet(input_dim, num_classes).to(device) # (input_dim, num_classes)
+model = ResNet(ResBlock, [3, 4, 6, 3], num_classes).to(device)
 model.apply(initialize_weights)
 
 # Set hyperparameters
@@ -38,7 +38,7 @@ EPOCHS = 100
 lr = 0.01
 
 # Optimitzer and loss
-optimizer = optim.SGD(model.parameters(), lr=lr, momentum = 0.9) # we use the same parameters as the paper
+optimizer = optim.SGD(model.parameters(), lr=lr, momentum = 0.9, weight_decay = 0.001) # we use the same parameters as the paper
 criterion = nn.CrossEntropyLoss()
 
 # Lists we will use to plot the loss function
