@@ -18,7 +18,7 @@ The key idea is to have the stacked layers approximate a residual function (H(x)
 
 The baseline architecture is inspired by VGG nets, with 3x3 convolutions and specific design rules. Downsampling is achieved using convolutional layers with a stride of 2. Skip connections are directly used when input and output dimensions match. When dimensions differ, two options are considered: identity mapping with zero-padding or 1x1 convolutions to match dimensions.
 
-The implementation involves standard practices such as image resizing, random cropping, mean subtraction, color jittering, BatchNorm, Kaiming weight initialization, and an AGD optimizer. No dropout is used, and learning rate scheduling is applied.
+The implementation involves standard practices such as image resizing, random cropping, mean subtraction, color jittering, BatchNorm, Kaiming weight initialization, and a SGD optimizer. No dropout is used, and learning rate scheduling is applied.
 
 ## Experiments
 
